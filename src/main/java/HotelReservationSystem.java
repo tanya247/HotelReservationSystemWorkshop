@@ -15,8 +15,8 @@ public class HotelReservationSystem {
         hotelMap = new HashMap<>();
     }
 
-    public boolean addHotel(String name, int HotelRateRegularWeekdays, int HotelRateRegularWeekEnd) {
-        Hotel hotelObject = new Hotel(name, HotelRateRegularWeekdays, HotelRateRegularWeekEnd);
+    public boolean addHotel(String name, int HotelRateRegularWeekdays, int HotelRateRegularWeekEnd, int Ratings) {
+        Hotel hotelObject = new Hotel(name, HotelRateRegularWeekdays, HotelRateRegularWeekEnd ,Ratings);
         hotelMap.put(name, hotelObject);
         return true;
     }
@@ -31,8 +31,7 @@ public class HotelReservationSystem {
             System.out.println("Hotel Name : " + entry.getKey());
             System.out.println("Rate on weekdays for regular customers : " + entry.getValue().getHotelRateRegularWeekDay());
             System.out.println("Rate of weekends for regular customers: "+entry.getValue().getHotelRateRegularWeekEnd());
-            System.out.println("Rate for rewarded person in regular weekdays: "+entry.getValue());
-            System.out.println("Rate for rewarded person in regular weekends: "+entry.getValue());
+            System.out.println("Ratings of the Hotel is: "+entry.getValue().getRatings());
         }
     }
     public String findCheapestHotel(String fromDate, String toDate) {

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T18:01:39" hostname="LAPTOP-Q9T3UUC8" time="0.04">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T18:21:05" hostname="LAPTOP-Q9T3UUC8" time="0.026">
   <properties/>
-  <testcase name="whenFindCheapestHotelIsCalled_shouldReturn_nameOfHotelWithCheapestRent()" classname="HotelReservationTest" time="0.04"/>
-  <system-out><![CDATA[Bridgewood
-Total Rate : 60
-]]></system-out>
+  <testcase name="whenRatingsAddedInTheHotelInformation_ShouldReturnsTrue()" classname="HotelReservationTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

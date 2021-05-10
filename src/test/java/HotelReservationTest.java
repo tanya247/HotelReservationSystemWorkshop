@@ -19,9 +19,9 @@ public class HotelReservationTest {
         Assertions.assertTrue(hotelReservationSystem.addHotel("Bridgewood", 160));
         Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 220));
         Assertions.assertEquals("Lakewood", hotelReservationSystem.findCheapestHotel("10Sep2020", "11Sep2020"));
-    }*/
+    }
     @Test
-    public void whenWeekendRateAddedInTheHostelRate_ShouldReturnsTrue() {
+    public void whenWeekendRateAddedInTheHotelRate_ShouldReturnsTrue() {
         Assertions.assertTrue(hotelReservationSystem.addHotel("Lakewood", 110, 90));
         Assertions.assertTrue(hotelReservationSystem.addHotel("Bridgewood", 160, 60));
         Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 110, 150));
@@ -35,8 +35,13 @@ public class HotelReservationTest {
         Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 220, 150));
 
         Assertions.assertEquals("Bridgewood", hotelReservationSystem.findCheapestHotel("10Sep2020", "11Sep2020"));
-    }
-
+    }*/
+   @Test
+   public void whenRatingsAddedInTheHotelInformation_ShouldReturnsTrue() {
+       Assertions.assertTrue(hotelReservationSystem.addHotel("Lakewood", 110, 90, 3));
+       Assertions.assertTrue(hotelReservationSystem.addHotel("Bridgewood", 160, 60, 4));
+       Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 220, 150, 5));
+   }
 
 
 }
