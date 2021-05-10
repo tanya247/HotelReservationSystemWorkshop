@@ -2,7 +2,15 @@ public class Hotel {
 
     public String hotelName;
     public int HotelRateRegularWeekDay;
+    public int HotelRateRegularWeekEnd;
 
+    public int getHotelRateRegularWeekEnd() {
+        return HotelRateRegularWeekEnd;
+    }
+
+    public void setHotelRateRegularWeekEnd(int hotelRateRegularWeekEnd) {
+        HotelRateRegularWeekEnd = hotelRateRegularWeekEnd;
+    }
 
     public String getHotelName() {
         return hotelName;
@@ -20,10 +28,11 @@ public class Hotel {
         this.HotelRateRegularWeekDay = HotelRateRegularWeekDay;
     }
 
-    public Hotel(String hotelName, int HotelRateRegularWeekDay) {
+    public Hotel(String hotelName, int HotelRateRegularWeekDay , int HotelRateRegularWeekEnd) {
         super();
         this.hotelName = hotelName;
         this.HotelRateRegularWeekDay = HotelRateRegularWeekDay;
+        this.HotelRateRegularWeekEnd = HotelRateRegularWeekEnd;
 
     }
 }

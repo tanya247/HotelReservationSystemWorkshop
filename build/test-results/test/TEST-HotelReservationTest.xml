@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T16:18:05" hostname="LAPTOP-Q9T3UUC8" time="0.04">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T16:38:32" hostname="LAPTOP-Q9T3UUC8" time="0.036">
   <properties/>
-  <testcase name="whenFindCheapestHotelMethodCalled_shouldReturn_nameOfHotelAndMinimumRent()" classname="HotelReservationTest" time="0.04"/>
-  <system-out><![CDATA[Lakewood
-Total Rate : 220
+  <testcase name="whenWeekendRateAddedInTheHostelRate_ShouldReturnsTrue()" classname="HotelReservationTest" time="0.036"/>
+  <system-out><![CDATA[********************************************************************************************
+Welcome in the online reservation of the hotel, you can book your hotel room online
+********************************************************************************************
+Hotel Name : Ridgewood
+Rate on weekdays for regular customers : 110
+Rate on weekend for regular customers: 150
+Hotel Name : Bridgewood
+Rate on weekdays for regular customers : 160
+Rate on weekend for regular customers: 60
+Hotel Name : Lakewood
+Rate on weekdays for regular customers : 110
+Rate on weekend for regular customers: 90
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
