@@ -1,7 +1,10 @@
 
+import java.time.DayOfWeek;
+import java.time.temporal.ChronoField;
+import java.util.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +21,8 @@ public class HotelReservationSystem {
         return true;
     }
 
+
+
     public void printHotels() {
         System.out.println("********************************************************************************************");
         System.out.println("Welcome in the online reservation of the hotel, you can book your hotel room online");
@@ -25,7 +30,9 @@ public class HotelReservationSystem {
         for (Map.Entry<String, Hotel> entry : hotelMap.entrySet()) {
             System.out.println("Hotel Name : " + entry.getKey());
             System.out.println("Rate on weekdays for regular customers : " + entry.getValue().getHotelRateRegularWeekDay());
-            System.out.println("Rate on weekend for regular customers: "+entry.getValue().getHotelRateRegularWeekEnd());
+            System.out.println("Rate of weekends for regular customers: "+entry.getValue().getHotelRateRegularWeekEnd());
+            System.out.println("Rate for rewarded person in regular weekdays: "+entry.getValue());
+            System.out.println("Rate for rewarded person in regular weekends: "+entry.getValue());
         }
     }
     public String findCheapestHotel(String fromDate, String toDate) {
@@ -37,14 +44,16 @@ public class HotelReservationSystem {
         }
 
         System.out.println(rateMap.get(minimumRate).get(0).getHotelName());
-        System.out.println("Total Rate : " + minimumRate*(numberOfDays(fromDate,toDate)+1));
+        System.out.println("Total Rate : " + minimumRate);
         return rateMap.get(minimumRate).get(0).getHotelName();
     }
-    public static Map<Integer, ArrayList<Hotel>>createRateMap(String fromDate, String toDate) {
+
+    public static Map<Integer, ArrayList<Hotel>> createRateMap(String fromDate, String toDate) {
         HashMap<Integer, ArrayList<Hotel>> rateMap = new HashMap<>();
         int numOfDays = numberOfDays(fromDate, toDate);
+        int count = isWeekend(fromDate,numOfDays);
         for (Map.Entry<String, Hotel> entry : hotelMap.entrySet()) {
-            int rent = (entry.getValue().getHotelRateRegularWeekDay() * numOfDays);
+            int rent = (entry.getValue().getHotelRateRegularWeekEnd() * count)+(entry.getValue().getHotelRateRegularWeekEnd()*(numOfDays-count));
             rateMap.computeIfAbsent(rent, k -> new ArrayList<>()).add(entry.getValue());
         }
         return rateMap;
@@ -61,6 +70,28 @@ public class HotelReservationSystem {
 
         return numOfDays;
     }
+
+    public static int isWeekend(String startDate, int numOfDays) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMyyyy");
+        LocalDate from = LocalDate.parse(startDate, formatter);
+        DayOfWeek day1_OfWeek = DayOfWeek.of(from.get(ChronoField.DAY_OF_WEEK));
+        int count = 0;
+        switch (day1_OfWeek) {
+            case SATURDAY:
+                count = 2 ;
+                break;
+            case SUNDAY:
+                count = 1 ;
+                break;
+            default:
+                count = 0;
+                break;
+
+        }
+        return  count;
+    }
+
+
 
     public static void main(String[] args) {
 

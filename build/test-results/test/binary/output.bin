@@ -1,12 +1,2 @@
-^********************************************************************************************
-UWelcome in the online reservation of the hotel, you can book your hotel room online
-^********************************************************************************************
-Hotel Name : Ridgewood
-.Rate on weekdays for regular customers : 110
-,Rate on weekend for regular customers: 150
-Hotel Name : Bridgewood
-.Rate on weekdays for regular customers : 160
-+Rate on weekend for regular customers: 60
-Hotel Name : Lakewood
-.Rate on weekdays for regular customers : 110
-+Rate on weekend for regular customers: 90
+Bridgewood
+Total Rate : 60

@@ -28,6 +28,15 @@ public class HotelReservationTest {
 
         hotelReservationSystem.printHotels();
     }
+    @Test
+    public void whenFindCheapestHotelIsCalled_shouldReturn_nameOfHotelWithCheapestRent() {
+        Assertions.assertTrue(hotelReservationSystem.addHotel("Lakewood", 110, 90));
+        Assertions.assertTrue(hotelReservationSystem.addHotel("Bridgewood", 160, 60));
+        Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 220, 150));
+
+        Assertions.assertEquals("Bridgewood", hotelReservationSystem.findCheapestHotel("10Sep2020", "11Sep2020"));
+    }
+
 
 
 }
