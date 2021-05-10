@@ -42,7 +42,13 @@ public class HotelReservationTest {
        Assertions.assertTrue(hotelReservationSystem.addHotel("Bridgewood", 160, 60, 4));
        Assertions.assertTrue(hotelReservationSystem.addHotel("Ridgewood", 220, 150, 5));
    }
-
+    @Test
+    public void whenCheapestBestRatedCalled_shouldReturn_bestRatedHotel() {
+        hotelReservationSystem.addHotel("Lakewood", 110, 90, 3);
+        hotelReservationSystem.addHotel("Bridgewood", 150, 60, 4);
+        hotelReservationSystem.addHotel("Ridgewood", 220, 150, 5);
+        Assertions.assertTrue(hotelReservationSystem.cheapestBestRatedHotel("11Sep2020", "12Sep2020"));
+    }
 
 }
 
