@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T15:35:42" hostname="LAPTOP-Q9T3UUC8" time="0.031">
+  <properties/>
+  <testcase name="whenNewHotelAdded_shouldReturnTrue()" classname="HotelReservationTest" time="0.031"/>
+  <system-out><![CDATA[********************************************************************************************
+Welcome in the online reservation of the hotel, you can book your hotel room online
+********************************************************************************************
+Hotel Name : Ridgewood
+Rate on weekdays for regular customers : 220
+Hotel Name : Bridgewood
+Rate on weekdays for regular customers : 160
+Hotel Name : Lakewood
+Rate on weekdays for regular customers : 110
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
