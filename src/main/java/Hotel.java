@@ -4,6 +4,24 @@ public class Hotel {
     public int HotelRateRegularWeekDay;
     public int HotelRateRegularWeekEnd;
     public int Ratings;
+    public int HotelRewardRegularCustomerWeekdayRate;
+    public int HotelRewardRegularCustomerWeekendRate;
+
+    public int getHotelRewardRegularCustomerWeekendRate() {
+        return HotelRewardRegularCustomerWeekendRate;
+    }
+
+    public void setHotelRewardRegularCustomerWeekendRate(int hotelRewardRegularCustomerWeekendRate) {
+        HotelRewardRegularCustomerWeekendRate = hotelRewardRegularCustomerWeekendRate;
+    }
+
+    public int getHotelRewardRegularCustomerWeekdayRate() {
+        return HotelRewardRegularCustomerWeekdayRate;
+    }
+
+    public void setHotelRewardRegularCustomerWeekdayRate(int hotelRewardRegularCustomerWeekdayRate) {
+        HotelRewardRegularCustomerWeekdayRate = hotelRewardRegularCustomerWeekdayRate;
+    }
 
     public int getRatings() {
         return Ratings;
@@ -37,12 +55,14 @@ public class Hotel {
         this.HotelRateRegularWeekDay = HotelRateRegularWeekDay;
     }
 
-    public Hotel(String hotelName, int HotelRateRegularWeekDay , int HotelRateRegularWeekEnd, int Ratings) {
+    public Hotel(String hotelName, int HotelRateRegularWeekDay , int HotelRateRegularWeekEnd, int Ratings, int HotelRewardRegularCustomerWeekdayRate, int HotelRewardRegularCustomerWeekendRate) {
         super();
         this.hotelName = hotelName;
         this.HotelRateRegularWeekDay = HotelRateRegularWeekDay;
         this.HotelRateRegularWeekEnd = HotelRateRegularWeekEnd;
         this.Ratings = Ratings;
+        this.HotelRewardRegularCustomerWeekdayRate = HotelRewardRegularCustomerWeekdayRate;
+        this.HotelRewardRegularCustomerWeekendRate = HotelRewardRegularCustomerWeekendRate;
 
     }
 }

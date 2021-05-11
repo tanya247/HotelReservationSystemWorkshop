@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T05:54:19" hostname="LAPTOP-Q9T3UUC8" time="0.046">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T06:17:15" hostname="LAPTOP-Q9T3UUC8" time="0.038">
   <properties/>
-  <testcase name="whenFindBestRatedMethodCalled_shouldReturn_bestRatedHotel()" classname="HotelReservationTest" time="0.046"/>
-  <system-out><![CDATA[Best Rated Hotel : Ridgewood, Rent : 370
+  <testcase name="whenAddedRatesForRewardCustomers_shouldAdd_hotelWithAllRates_InLoyalityProgram()" classname="HotelReservationTest" time="0.038"/>
+  <system-out><![CDATA[********************************************************************************************
+Welcome in the online reservation of the hotel, you can book your hotel room online
+********************************************************************************************
+Hotel Name : Ridgewood
+Rate on weekdays for regular customers : 220
+Rate of weekends for regular customers: 150
+Ratings of the Hotel is: 5
+Hotel Name : Bridgewood
+Rate on weekdays for regular customers : 150
+Rate of weekends for regular customers: 50
+Ratings of the Hotel is: 4
+Hotel Name : Lakewood
+Rate on weekdays for regular customers : 110
+Rate of weekends for regular customers: 90
+Ratings of the Hotel is: 3
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

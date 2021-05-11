@@ -15,8 +15,8 @@ public class HotelReservationSystem {
         hotelMap = new HashMap<>();
     }
 
-    public boolean addHotel(String name, int HotelRateRegularWeekdays, int HotelRateRegularWeekEnd, int Ratings) {
-        Hotel hotelObject = new Hotel(name, HotelRateRegularWeekdays, HotelRateRegularWeekEnd ,Ratings);
+    public boolean addHotel(String name, int HotelRateRegularWeekdays, int HotelRateRegularWeekEnd, int Ratings, int HotelRewardRegularCustomerWeekdayRate, int HotelRewardRegularCustomerWeekendRate) {
+        Hotel hotelObject = new Hotel(name, HotelRateRegularWeekdays, HotelRateRegularWeekEnd ,Ratings, HotelRewardRegularCustomerWeekdayRate, HotelRewardRegularCustomerWeekendRate);
         hotelMap.put(name, hotelObject);
         return true;
     }
