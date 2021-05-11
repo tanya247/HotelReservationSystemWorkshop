@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T18:45:32" hostname="LAPTOP-Q9T3UUC8" time="0.049">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T05:54:19" hostname="LAPTOP-Q9T3UUC8" time="0.046">
   <properties/>
-  <testcase name="whenCheapestBestRatedCalled_shouldReturn_bestRatedHotel()" classname="HotelReservationTest" time="0.049"/>
-  <system-out><![CDATA[Cheapest Hotel for you is Bridgewood with Rating 4 Total Rent : 60
-
+  <testcase name="whenFindBestRatedMethodCalled_shouldReturn_bestRatedHotel()" classname="HotelReservationTest" time="0.046"/>
+  <system-out><![CDATA[Best Rated Hotel : Ridgewood, Rent : 370
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
