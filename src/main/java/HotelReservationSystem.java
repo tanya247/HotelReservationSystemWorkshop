@@ -1,4 +1,5 @@
 
+import java.io.IOException;
 import java.time.DayOfWeek;
 import java.time.temporal.ChronoField;
 import java.time.LocalDate;
@@ -34,8 +35,13 @@ public class HotelReservationSystem {
             System.out.println("Ratings of the Hotel is: "+entry.getValue().getRatings());
         }
     }
-    public boolean cheapestBestRatedHotel(String fromDate, String toDate) {
-        Map<Integer, ArrayList<Hotel>> rentMap = createRateMap(fromDate, toDate);
+    public boolean cheapestBestRatedHotel(String fromDate, String toDate, String Customer_type) {
+        Map<Integer, ArrayList<Hotel>> rentMap = null;
+        try {
+            rentMap = createRateMap(fromDate, toDate, Customer_type);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         int minimumRent = Integer.MAX_VALUE;
         for (Map.Entry<Integer, ArrayList<Hotel>> entry : rentMap.entrySet()) {
             if (entry.getKey() < minimumRent)
@@ -77,12 +83,18 @@ public class HotelReservationSystem {
     }
 
 
-    public static Map<Integer, ArrayList<Hotel>> createRateMap(String fromDate, String toDate) {
+    public static Map<Integer, ArrayList<Hotel>> createRateMap(String fromDate, String toDate, String Customer_type) throws IOException{
         HashMap<Integer, ArrayList<Hotel>> rateMap = new HashMap<>();
         int count[] = numberOfDays(fromDate, toDate);
         for (Map.Entry<String, Hotel> entry : hotelMap.entrySet()) {
-            int rent = (entry.getValue().getHotelRateRegularWeekEnd() * count[0])+(entry.getValue().getHotelRateRegularWeekEnd()*count[1]);
-            rateMap.computeIfAbsent(rent, k -> new ArrayList<>()).add(entry.getValue());
+            if(Customer_type == "Regular") {
+                int rent = (entry.getValue().getHotelRateRegularWeekEnd() * count[0]) + (entry.getValue().getHotelRateRegularWeekEnd() * count[1]);
+                rateMap.computeIfAbsent(rent, k -> new ArrayList<>()).add(entry.getValue());
+            }
+            else if(Customer_type == "Rewarded"){
+                int rent = (entry.getValue().getHotelRateRegularWeekEnd() * count[0]) + (entry.getValue().getHotelRateRegularWeekEnd() * count[1]);
+                rateMap.computeIfAbsent(rent, k -> new ArrayList<>()).add(entry.getValue());
+            }
         }
         return rateMap;
     }
