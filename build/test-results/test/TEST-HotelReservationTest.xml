@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T06:49:26" hostname="LAPTOP-Q9T3UUC8" time="0.151">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T07:04:43" hostname="LAPTOP-Q9T3UUC8" time="0.02">
   <properties/>
-  <testcase name="whenCheapestBestRatedCalledForBothRewardCustomersAndRegularCustomer_shouldReturnTrue()" classname="HotelReservationTest" time="0.151"/>
-  <system-out><![CDATA[Cheapest Hotel for you is Bridgewood with Rating 4 Total Rent : 100
-
-]]></system-out>
+  <testcase name="whenEntriesGiven_shouldThrowExceptionOnInvalidEntry()" classname="HotelReservationTest" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

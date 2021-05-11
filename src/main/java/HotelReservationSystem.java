@@ -8,6 +8,8 @@ import java.time.temporal.TemporalAccessor;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class HotelReservationSystem {
     private static Map<String, Hotel> hotelMap;
@@ -135,6 +137,17 @@ public class HotelReservationSystem {
     
         }
 
+    }
+    public void validateInputs(String customerType, String fromDate, String toDate) throws Exception {
+        String regex = "^[0-9]{2}[ ][A-Za-z]{3}[ ][0-9]{4}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcherFrom = pattern.matcher(fromDate);
+        Matcher matcherTo = pattern.matcher(toDate);
+        if (!matcherFrom.find() || !matcherTo.find() || !customerType.equalsIgnoreCase("Regular")
+                || !customerType.equalsIgnoreCase("Reward")) {
+            throw new Exception("Invalid input, Please enter a Valid Input");
+        }
+        return;
     }
 
 

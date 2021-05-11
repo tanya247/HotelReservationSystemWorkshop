@@ -70,6 +70,15 @@ public class HotelReservationTest {
         hotelReservationSystem.addHotel("Ridgewood", 220, 150, 5,100,40);
         Assertions.assertTrue(hotelReservationSystem.cheapestBestRatedHotel( "11Sep2020", "12Sep2020","Rewarded"));
     }
+    @Test
+    public void whenEntriesGiven_shouldThrowExceptionOnInvalidEntry() {
+        hotelReservationSystem.addHotel("Lakewood", 110, 90, 3, 80, 80);
+        hotelReservationSystem.addHotel("Bridgewood", 150, 50, 4, 110, 50);
+        hotelReservationSystem.addHotel("Ridgewood", 220, 150, 5, 100, 40);
+        Assertions.assertThrows(Exception.class, () -> {
+            hotelReservationSystem.validateInputs("Random", "11Sep2020", "12Sep2020");
+        });
+    }
 
 }
 
