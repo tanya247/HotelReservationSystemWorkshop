@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T07:04:43" hostname="LAPTOP-Q9T3UUC8" time="0.02">
+<testsuite name="HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T07:15:53" hostname="LAPTOP-Q9T3UUC8" time="0.019">
   <properties/>
-  <testcase name="whenEntriesGiven_shouldThrowExceptionOnInvalidEntry()" classname="HotelReservationTest" time="0.02"/>
+  <testcase name="whenEntriesGiven_shouldReturnTrueWhenEntriesIsCorrect()" classname="HotelReservationTest" time="0.019"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

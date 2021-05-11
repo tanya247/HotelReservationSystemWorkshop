@@ -3,3 +3,4 @@ Hotel.java
 HotelReservationSystem.java
  HotelReservationSystem
  HotelReservationSystem$1
+ HotelReservationSystem$InvalidEntryException

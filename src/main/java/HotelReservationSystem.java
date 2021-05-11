@@ -1,4 +1,4 @@
-
+import java.util.stream.*;
 import java.io.IOException;
 import java.time.DayOfWeek;
 import java.time.temporal.ChronoField;
@@ -137,6 +137,11 @@ public class HotelReservationSystem {
     
         }
 
+    }
+    public class InvalidEntryException extends Exception {
+        public InvalidEntryException(String message) {
+            super(message);
+        }
     }
     public void validateInputs(String customerType, String fromDate, String toDate) throws Exception {
         String regex = "^[0-9]{2}[ ][A-Za-z]{3}[ ][0-9]{4}$";
